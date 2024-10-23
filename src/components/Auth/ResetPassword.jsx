@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Pic1 from "../assets/resetPassword/Pic1.png";
+import Pic1 from "../../assets/resetPassword/Pic1.png";
 import { useNavigate } from "react-router-dom";
 import { MdArrowRightAlt } from "react-icons/md";
 

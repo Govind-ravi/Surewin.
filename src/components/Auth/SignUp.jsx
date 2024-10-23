@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Pic1 from "../assets/signUp/Pic1.png";
-import Image1 from "../assets/signUp/Image1.png";
-import Google from "../assets/logos/google.png";
+import Pic1 from "../../assets/signUp/Pic1.png";
+import Image1 from "../../assets/signUp/Image1.png";
+import Google from "../../assets/logos/google.png";
 import { FaFacebook } from "react-icons/fa6";
 import { MdArrowRightAlt } from "react-icons/md";
 import { useNavigate } from "react-router-dom";

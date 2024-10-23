@@ -1,10 +1,11 @@
 import { FaChevronDown } from "react-icons/fa";
 import { BsGlobe2 } from "react-icons/bs";
 import { useState } from "react";
-import { Link } from 'react-router-dom'; // Import Link from react-router-dom
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
 
 const Navbar = () => {
   const [dropdownVisible, setDropdownVisible] = useState(false);
+  const [logedIn, seLogedIn] = useState(false);
 
   return (
     <nav
@@ -55,7 +56,10 @@ const Navbar = () => {
           )}
         </li>
         <li className="hover:scale-105 transition duration-100">
-          <Link to="/big-wins" className="hover:scale-110 transition duration-300">
+          <Link
+            to="/big-wins"
+            className="hover:scale-110 transition duration-300"
+          >
             Big Wins
           </Link>
         </li>
@@ -71,9 +75,21 @@ const Navbar = () => {
           <BsGlobe2 />
           <span className="underline">English</span>
         </div>
-        <Link to="/signup" className="bg-gray-800 text-white px-2 py-1 rounded-2xl hover:scale-105 transition">
-          Register
-        </Link>
+        {!logedIn ? (
+          <Link
+            to="/dashboard"
+            className="bg-gray-800 text-white px-2 py-1 rounded-2xl hover:scale-105 transition"
+          >
+            Dashboard
+          </Link>
+        ) : (
+          <Link
+            to="/signup"
+            className="bg-gray-800 text-white px-2 py-1 rounded-2xl hover:scale-105 transition"
+          >
+            Register
+          </Link>
+        )}
       </div>
     </nav>
   );

@@ -2,22 +2,24 @@ import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
-import SignUp from "./components/SignUp";
-import LogIn from "./components/LogIn";
-import ResetPassword from "./components/ResetPassword";
+import SignUp from "./components/Auth/SignUp";
+import LogIn from "./components/Auth/LogIn";
+import ResetPassword from "./components/Auth/ResetPassword";
 import Footer from "./components/Footer";
+import Dashboard from "./components/dashboard/Dashboard";
 
 function App() {
   return (
     <>
       <Router>
       <Navbar />
-      <div className="mt-24">
+      <div className="mt-24 min-h-[calc(100vh-300px)]">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/login" element={<LogIn />} />
           <Route path="/reset-password" element={<ResetPassword />} />
+          <Route path="/dashboard/*" element={<Dashboard />} />
         </Routes>
       </div>
       <Footer/>
