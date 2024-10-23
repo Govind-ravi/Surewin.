@@ -40,3 +40,36 @@
   box-shadow: 2.5px 2.5px var(--dark-gray-btn);
   transform: scale(1.01);
 }
+
+/* Hide scrollbar for body */
+:root {
+  scrollbar-width: none; /* Firefox: hide scrollbar */
+}
+
+/* Custom scrollbar styles for WebKit browsers */
+::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+/* Track of the scrollbar */
+::-webkit-scrollbar-track {
+  background: transparent; /* No background for the track */
+}
+
+/* Thumb of the scrollbar */
+::-webkit-scrollbar-thumb {
+  background: darkgray; /* Color of the scrollbar thumb */
+  border-radius: 10px; /* Rounded edges for the scrollbar thumb */
+}
+
+/* Hide scrollbar arrows */
+::-webkit-scrollbar-button {
+  display: none; /* Hide the buttons (arrows) */
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin; /* Make scrollbar thin */
+  scrollbar-color: darkgray transparent; /* Thumb color and track color */
+}
+

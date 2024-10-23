@@ -7,6 +7,7 @@ import LogIn from "./components/Auth/LogIn";
 import ResetPassword from "./components/Auth/ResetPassword";
 import Footer from "./components/Footer";
 import Dashboard from "./components/dashboard/Dashboard";
+import Policy from "./components/policy/Policy";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/login" element={<LogIn />} />
           <Route path="/reset-password" element={<ResetPassword />} />
           <Route path="/dashboard/*" element={<Dashboard />} />
+          <Route path="/policy/*" element={<Policy />} />
         </Routes>
       </div>
       <Footer/>

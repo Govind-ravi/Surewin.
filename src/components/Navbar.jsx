@@ -78,14 +78,14 @@ const Navbar = () => {
         {!logedIn ? (
           <Link
             to="/dashboard"
-            className="bg-gray-800 text-white px-2 py-1 rounded-2xl hover:scale-105 transition"
+            className="bg-gray-800 text-white px-4 py-1 rounded-2xl hover:scale-105 transition"
           >
             Dashboard
           </Link>
         ) : (
           <Link
             to="/signup"
-            className="bg-gray-800 text-white px-2 py-1 rounded-2xl hover:scale-105 transition"
+            className="bg-gray-800 text-white px-4 py-1 rounded-2xl hover:scale-105 transition"
           >
             Register
           </Link>
