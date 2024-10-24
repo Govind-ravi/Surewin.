@@ -14,7 +14,7 @@ function App() {
     <>
       <Router>
       <Navbar />
-      <div className="mt-24 min-h-[calc(100vh-300px)]">
+      <div className="mt-28 min-h-[calc(100vh-300px)]">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/signup" element={<SignUp />} />

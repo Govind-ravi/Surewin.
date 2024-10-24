@@ -15,6 +15,20 @@ export default {
         'light-gray-btn': '#D9D9D9',
         'blue-btn': '#0057FF',
       },
+      keyframes: {
+        scrollX: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-100%)' },
+        },
+        scrollXReverse: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(100%)' },
+        },
+      },
+      animation: {
+        scrollX: 'scrollX 30s linear infinite',
+        scrollXReverse: 'scrollXReverse 30s linear infinite',
+      },
     },
   },
   plugins: [],

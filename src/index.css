@@ -73,3 +73,31 @@
   scrollbar-color: darkgray transparent; /* Thumb color and track color */
 }
 
+/* Scrolls */
+/* Keyframes for scrolling the logos */
+@keyframes scrollLogos {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Keyframes for scrolling the images (opposite direction) */
+@keyframes scrollImages {
+  0% {
+    transform: translateX(-100%); /* Start with the actual first image */
+  }
+  100% {
+    transform: translateX(0); /* Move fully to the right */
+  }
+}
+
+/* Add animations to the logos and images */
+.scrolling-logos {
+  animation: scrollLogos 20s linear infinite;
+}
+.scrolling-images {
+  animation: scrollImages 20s linear infinite;
+}
