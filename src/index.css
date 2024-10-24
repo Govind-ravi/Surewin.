@@ -101,3 +101,8 @@
 .scrolling-images {
   animation: scrollImages 20s linear infinite;
 }
+
+/* button hover */
+button:hover{
+    opacity: 0.8;
+}

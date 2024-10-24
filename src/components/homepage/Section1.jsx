@@ -15,16 +15,16 @@ import {
   FaUser,
   FaHeadphones,
 } from "react-icons/fa";
-import { SiSamsung, SiOppo, SiSony, SiOneplus, SiLg } from "react-icons/si";
+import { SiSamsung, SiOppo, SiSony, SiOneplus, SiLg, SiBoat } from "react-icons/si";
 
 const companiesLogo = [
   { name: "Apple", logo: <FaApple /> },
-  { name: "boAt", logo: <FaHeadphones /> },
+  { name: "BoAt", logo: <SiBoat color="red" /> },
   { name: "Ather", logo: <FaMotorcycle /> },
   { name: "Chethak", logo: <FaCar /> },
   { name: "Ola", logo: <FaCar /> },
   { name: "Noise", logo: <FaHeadphones /> },
-  { name: "Boat", logo: <FaHeadphones /> },
+  { name: "BoAt", logo: <SiBoat color="red" /> },
   { name: "Samsung", logo: <SiSamsung /> },
   { name: "Nothing", logo: <FaUser /> },
   { name: "Oppo", logo: <SiOppo /> },
@@ -70,7 +70,7 @@ function Section1() {
       </div>
 
       {/* Scrolling Logos */}
-      <div className="overflow-hidden mt-16">
+      <div className="overflow-hidden mt-16 " >
         <div className="scrolling-logos flex gap-8">
           {companiesLogo.map((company, index) => (
             <div

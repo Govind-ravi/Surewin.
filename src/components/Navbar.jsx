@@ -1,10 +1,9 @@
 import { FaChevronDown } from "react-icons/fa";
 import { BsGlobe2 } from "react-icons/bs";
 import { useState } from "react";
-import { Link } from "react-router-dom"; // Import Link from react-router-dom
+import { NavLink } from "react-router-dom"; // Import NavLink from react-router-dom
 
 const Navbar = () => {
-  const [dropdownVisible, setDropdownVisible] = useState(false);
   const [logedIn, seLogedIn] = useState(false);
 
   return (
@@ -15,59 +14,29 @@ const Navbar = () => {
       <div className="title font-bold text-3xl">Surewin.</div>
       <ul className="flex gap-8">
         <li className="hover:scale-105 transition duration-100">
-          <Link to="/" className="font-bold">
+          <NavLink to="/" className={({ isActive }) => isActive && "font-bold"}>
             Home
-          </Link>
-        </li>
-        <li className="relative">
-          <div
-            onClick={() => setDropdownVisible(!dropdownVisible)}
-            className="bg-gray-200 px-2 rounded-lg flex items-center gap-1 cursor-pointer hover:underline"
-          >
-            Raffels <FaChevronDown size={8} />
-          </div>
-          {dropdownVisible && (
-            <ul className="absolute left-0 mt-2 bg-white shadow-lg rounded-md">
-              <li>
-                <Link
-                  to="/raffel1" // Change to your specific route for Raffel1
-                  className="block px-2 py-1 text-gray-700 hover:bg-gray-100"
-                >
-                  Raffel1
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/raffel2" // Change to your specific route for Raffel2
-                  className="block px-2 py-1 text-gray-700 hover:bg-gray-100"
-                >
-                  Raffel2
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/raffel3" // Change to your specific route for Raffel3
-                  className="block px-2 py-1 text-gray-700 hover:bg-gray-100"
-                >
-                  Raffel3
-                </Link>
-              </li>
-            </ul>
-          )}
+          </NavLink>
         </li>
         <li className="hover:scale-105 transition duration-100">
-          <Link
+          <NavLink to="/raffels" className={({ isActive }) => isActive && "font-bold"}>
+            Raffels
+          </NavLink>
+        </li>
+
+        <li className="hover:scale-105 transition duration-100">
+          <NavLink
             to="/big-wins"
-            className="hover:scale-110 transition duration-300"
+            className={({ isActive }) => isActive && "font-bold"}
           >
             Big Wins
-          </Link>
+          </NavLink>
         </li>
         <li className="hover:scale-105 transition duration-100">
-          <Link to="/process">Process</Link>
+          <NavLink to="/process" className={({ isActive }) => isActive && "font-bold"}>Process</NavLink>
         </li>
         <li className="hover:scale-105 transition duration-100">
-          <Link to="/faqs">FAQs</Link>
+          <NavLink to="/faqs" className={({ isActive }) => isActive && "font-bold"}>FAQs</NavLink>
         </li>
       </ul>
       <div className="flex gap-4">
@@ -76,19 +45,19 @@ const Navbar = () => {
           <span className="underline">English</span>
         </div>
         {!logedIn ? (
-          <Link
+          <NavLink
             to="/dashboard"
             className="bg-gray-800 text-white px-4 py-1 rounded-2xl hover:scale-105 transition"
           >
             Dashboard
-          </Link>
+          </NavLink>
         ) : (
-          <Link
+          <NavLink
             to="/signup"
             className="bg-gray-800 text-white px-4 py-1 rounded-2xl hover:scale-105 transition"
           >
             Register
-          </Link>
+          </NavLink>
         )}
       </div>
     </nav>
